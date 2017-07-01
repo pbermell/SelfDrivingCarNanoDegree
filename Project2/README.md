@@ -6,7 +6,8 @@ April 2017
 [image01]: ./rimages/ill01.png
 [image02]: ./rimages/ill02.png
 [image03]: ./rimages/ill03.png
-
+[table1]: ./rimages/t01.png
+[image03]: ./rimages/ill03.png
 
 
 ## 0. Introduction
@@ -37,6 +38,11 @@ The images on the dataset are not evenly distributed across the classes provided
 
 Figure3: one image of each class of the dataset.
 
-An intuitive view to the data completes the exploratory visualisation process. For instance, figure 3 shows an example picture of each class from the dataset. Exploring this visualisation over multiple images of the 43 classes may look irrelevant. However, it gives an idea of the sort of traffic signs standards, the dataset is built upon. 
+An intuitive view to the data completes the exploratory visualisation process. For instance, figure 3 shows an example picture of each class from the dataset. Exploring this visualisation over multiple images of the 43 classes may look irrelevant. However, it gives an idea of the sort of traffic signs images the dataset is built upon. 
 
+## 2. Design and test a model architecture
+### 2.1 Data preprocessing
 
+Basic preprocessing of the dataset was achieved by first re-shuffling randomly the dataset which was found to be arranged by classes. In Table 1, the class labels of the first 500 image samples are displayed before (left) and after (right) the re-shuffling.
+
+![alt text][table1]
