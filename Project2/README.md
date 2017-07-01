@@ -14,11 +14,11 @@ The project was implemented on an Acer Aspire v15 Nitro – Black Edition Laptop
 ## 1. Dataset summary & exploration
 The dataset is a compilation of traffic signs made available by a German institution called: “Institut fur Neuroinformatik”. The first approach to understand the dataset is querying it so we can undertsand the size and the shape of its images content. The following elements are queried from the dataset using python commands:  
 
-Number of training examples = 34799 ; Number of validation examples = 4410 ; Number of testing examples = 12630 ; Image data shape = (32, 32, 3) ; Number of classes = 43 |
+Number of training examples = 34799 ; Number of validation examples = 4410 ; Number of testing examples = 12630 ; Image data shape = (32, 32, 3) ; Number of classes = 43
 
-
-
-
+### 1.1 Exploratory visualisation
+While these figures are fundamental to understand the dataset, further confidence was built through several visualisations. First of all a sample of the 32x32x3 images of the dataset was extracted (Illustration1). 
 ![alt text][image01]
+Figure1: a sample of the images in the dataset
 
 
