@@ -18,7 +18,9 @@ Number of training examples = 34799 ; Number of validation examples = 4410 ; Num
 
 ### 1.1 Exploratory visualisation
 While these figures are fundamental to understand the dataset, further confidence was built through several visualisations. First of all a sample of the 32x32x3 images of the dataset was extracted (Illustration1). 
+
 ![alt text][image01]
+
 Figure1: a sample of the images in the dataset
 
 
