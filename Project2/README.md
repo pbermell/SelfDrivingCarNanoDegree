@@ -4,6 +4,8 @@ April 2017
 
 [//]: # (Image References)
 [image01]: ./rimages/ill01.png
+[image02]: ./rimages/ill02.png
+[image03]: ./rimages/ill03.png
 
 
 
@@ -17,10 +19,24 @@ The dataset is a compilation of traffic signs made available by a German institu
 Number of training examples = 34799 ; Number of validation examples = 4410 ; Number of testing examples = 12630 ; Image data shape = (32, 32, 3) ; Number of classes = 43
 
 ### 1.1 Exploratory visualisation
-While these figures are fundamental to understand the dataset, further confidence was built through several visualisations. First of all a sample of the 32x32x3 images of the dataset was extracted (Illustration1). 
+While these figures are fundamental to understand the dataset, further confidence was built through several visualisations. First of all a sample of the 32x32x3 images of the dataset was extracted (Figure1). 
 
 ![alt text][image01]
 
 Figure1: a sample of the images in the dataset
+
+The next question about the dataset concern the distribution of the training set samples among the 43 labeled classes. Fot that, a distribution histogram was plotted and presented in the Jupyter notebook, (Figure2). 
+
+![alt text][image02]
+
+Figure2: distribution of classes in the training set
+
+The images on the dataset are not evenly distributed across the classes provided by the labelled data as it can be appreciated in the plot. A query on the data showed that the least populated class holds 180 images while the most populated one contains 2010 image samples. This clearly builds the case for artificially creating data samples for the less populated clasess. This is a recommended practice on the notion that training a neural network over non uniform distribution of labelled data can biase the predictions. 
+
+![alt text][image03]
+
+Figure3: one image of each class of the dataset.
+
+An intuitive view to the data completes the exploratory visualisation process. For instance, figure 3 shows an example picture of each class from the dataset. Exploring this visualisation over multiple images of the 43 classes may look irrelevant. However, it gives an idea of the sort of traffic signs standards, the dataset is built upon. 
 
 
