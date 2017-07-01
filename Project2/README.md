@@ -19,13 +19,13 @@ April 2017
 [image11]: ./rimages/ill11.png
 
 
-## 0 Introduction
+## 0. Introduction
 This document reports on the work carried out to implement a traffic sign recognition system using the learning gained in the Udacity Self Driving Car Nanodegree course. Project 2 focuses on the implementation of Convolutional Neural Networks using TensorFlow. This is my first attempt to implement a Neural Network and it has been an intensive exercise of learning. The report is part of the Project 2 deliverables and documents this journey. The implementation of this project was in great deal adapted from the one created by Jeremy Shannon, a fellow student on the course [1]. Any re-use of code from others has been analysed and adapted. I was particularly interested in understanding general python syntax and openCV syntax and Jeremy’s notebook is a great source of knowledge for this. 
 
 ### 0.1 Implemenation platform
 The project was implemented on an Acer Aspire v15 Nitro – Black Edition Laptop, (Intel Core i7-4720HQ processor, 16Gb RAM), equipped with an NVIDIA GEFORCE GTX 960m GPU. The  software implementation uses Docker version 17.03.1-ce hosted on Ubuntu 16.04 LTS. On top of this, the solution uses the NVIDIA-DOCKER software solution enabling the containers to access the GPU of the host computer. The project uses a modified version of the official Python 3 and GPU enabled Tensorflow Docker image (“tensorflow/tensorflow:latest-gpu-py3”), available at the Docker Hub. While the default base image supports GPU and python 3, aditional layers were built into the container in order to implement the OpenCV 3 dependency for the project. With this setup, the training times for the convolutional neural network (Sermanet architecture), using the GPU were less than 5 minutes.
 
-## 1 Dataset summary & exploration
+## 1. Dataset summary & exploration
 The dataset is a compilation of traffic signs made available by a German institution called: “Institut fur Neuroinformatik”. The first approach to understand the dataset is querying it so we can undertsand the size and the shape of its images content. The following elements are queried from the dataset using python commands:  
 
 Number of training examples = 34799 ; Number of validation examples = 4410 ; Number of testing examples = 12630 ; Image data shape = (32, 32, 3) ; Number of classes = 43
@@ -51,7 +51,7 @@ Figure3: one image of each class of the dataset.
 
 An intuitive view to the data completes the exploratory visualisation process. For instance, figure 3 shows an example picture of each class from the dataset. Exploring this visualisation over multiple images of the 43 classes may look irrelevant. However, it gives an idea of the sort of traffic signs images the dataset is built upon. 
 
-## 2 Design and test a model architecture
+## 2. Design and test a model architecture
 ### 2.1 Data preprocessing
 
 Basic preprocessing of the dataset was achieved by first re-shuffling randomly the dataset which was found to be arranged by classes. In Table 2, the class labels of the first 500 image samples are displayed before (left) and after (right) the re-shuffling.
@@ -120,7 +120,7 @@ For the training optimisation, I used the AdamOptimiser. The choice was based on
 
 The solution uses the separated test dataset to evaluate the network trained in previous sections. The performance obtained is 92.4%. 
 
-## 3 Test a model on new images
+## 3. Test a model on new images
 
 ### 3.1 Acquiring new images
 
@@ -152,7 +152,7 @@ The softmax probability analysis shown in figure 11 also confirms the performanc
 
 ![alt text][image11]
 
-## 4 Concluding remarks
+## 4. Concluding remarks
 
 In this project, I have built the inderstanding required to implement a convolutional neural network to classify images. This is the first immplementation of this type of system I have ver done. It has been quite a journey and a very steep learning curve given my limited experience in Python programming. I am in debt to the implementations in [1] and [2] from which I have learn a lot. I haven’t reused any part of their code without analysing it. The result is probably a longer development time than what other students commited to the project. However, I have enjoyed the learning and the experience. Despite of some uncertanties, I have a clear picture of the architecture of a Neural Network and the key parameters influencing its performance. I consider this work quite an achievement done on top of my day to day work at Airbus CTO office. I have alredy a couple of ideas of what I could do with the techniques learnt here for instancce in the area of manufacturing engineering digitalisation. 
 
