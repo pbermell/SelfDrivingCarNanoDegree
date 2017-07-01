@@ -128,5 +128,6 @@ In summary, I think that I have achieved my learning objectives with this projec
 ## References
 
 [1] https://github.com/jeremy-shannon/CarND-Behavioral-Cloning-Project
+
 [2] M. Bojarski et al. End to end learning for self-driving cars. https://arxiv.org/pdf/1604.07316.pdf
 
