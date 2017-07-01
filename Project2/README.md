@@ -1,5 +1,5 @@
 # Trafic sign recognition
-Self Driving Car Udacity NanoDegree. Project 2
+Self Driving Car Engineer, Udacity NanoDegree. Project 2
 April 2017
 
 [//]: # (Image References)
