@@ -84,3 +84,49 @@ Up to four captures of data driving the car in training mode were performed in t
 
 Figure 3: screenshot of KNIME model
 
+## 3. Architecture and training documentation
+
+Using Keras 2 specified the execution of the model in the following way:
+
+`model.fit_generator(train_prep,`
+                    `validation_data=val_prep,`
+                    `epochs= n_epochs,`
+                    `validation_steps=(len(images_test)/batch_size),`
+                   ` steps_per_epoch=(len(images_train)/batch_size),`
+                    `verbose = 1,`
+                   ` callbacks = [checkpoint])`
+                  
+
+After several attempts to understand the and specify a correct value for `validation_steps` and `steps_per_epoch`, I found help in the Udacity forum explaining that the recommended approach is to use the size of the training set divided by the batch size. Until then, I was choosing different values and not being able to drive the car within the road limits. The specification of these values as described in the above code snippet is what made me achieve the first complete lap of the project. 
+
+Following this, I run a series of experiments with the network architecture that had worked with various conditions of the number of epochs and datasets. I saved the output models to test their performance on the road. The following table summaries these tests: 
+
+
+| scenario  |Dataset                           |Epochs  |Driving assesment                           |
+|-----------|:--------------------------------:|:------:|:------------------------------------------:|
+|1          |Udacity_provided dataset          |20      |Consistent drive around the circuit         |
+|2          |Udacity_provided dataset          |30      |Consistent drive around the circuit         |
+|3          |Udacity_provided dataset          |50      |Undecisve driving and crash                 |
+|4          |manually added dataset + Udacity  |20      |Undecisve driving and wobbly oversteering   |
+|5          |manually added dataset + Udacity  |50      |Undecisve driving and wobbly oversteering   |
+
+
+The best results I managed to obtain are the ones of scenario 1 and 2. Training time in both cases is under three minutes on my laptop. I interpret the oversteering as a case of over-fitting. 
+
+## 4. Conclusions and Discussion
+
+A convolutional neural network to drive a simulated car has been developed and reported in this document. The architecture choices and the training conditions of the scenarios 1 and 2 enabled the car to consistently drive around the simulation track. None of these completed the challenge track but covered about a third of its length before crashing on a very steep curve. The objective of my implementation as stated in section 0 was to test whether if the chosen architecture could be able to drive the track with minimum transformation of the images and no jittering. The results shows the achievement of this objective by demonstrating that the care can be driven around the track with a low amount of training and data, (5124 angle labelled images in the post processed training dataset). This corroborates the conclusions made by Shannon [1], who pointed out the importance of the data. The work here extends those insights by testing their validity on an even simpler setup in terms of data and training. Although [1] does no specify the epochs used for training, his work reports the use of a larger dataset of 16482 labelled samples, (post processed). This findings have implications in the strategy to approach a deep neural network implementation: give high importance  to the quality of the data.  
+
+The results described here also challenge some of the recommendations 4 and 6 from Paul Heraty, (figure 1). However, it can be concluded that the guide is still accurate in most of its statements. 
+
+![alt text][image04]
+
+Figure 4: Paul Heraty's recommendations for Project 3.
+
+In summary, I think that I have achieved my learning objectives with this project. There are still some uncertainties about the tweaking of parameters. I leave those for future projects. 
+
+## References
+
+[1] https://github.com/jeremy-shannon/CarND-Behavioral-Cloning-Project
+[2] M. Bojarski et al. End to end learning for self-driving cars. https://arxiv.org/pdf/1604.07316.pdf
+
