@@ -152,6 +152,8 @@ The softmax probability analysis shown in figure 11 also confirms the performanc
 
 ![alt text][image11]
 
+Figure 11: Softmax results
+
 ## 4. Concluding remarks
 
 In this project, I have built the inderstanding required to implement a convolutional neural network to classify images. This is the first immplementation of this type of system I have ver done. It has been quite a journey and a very steep learning curve given my limited experience in Python programming. I am in debt to the implementations in [1] and [2] from which I have learn a lot. I haven’t reused any part of their code without analysing it. The result is probably a longer development time than what other students commited to the project. However, I have enjoyed the learning and the experience. Despite of some uncertanties, I have a clear picture of the architecture of a Neural Network and the key parameters influencing its performance. I consider this work quite an achievement done on top of my day to day work at Airbus CTO office. I have alredy a couple of ideas of what I could do with the techniques learnt here for instancce in the area of manufacturing engineering digitalisation. 
