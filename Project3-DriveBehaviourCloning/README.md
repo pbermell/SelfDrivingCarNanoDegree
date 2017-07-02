@@ -37,6 +37,7 @@ The second element of the main program is the pre-processing of these arrays in 
  
 ![alt text][image01]
 
+
 Figure 1: Distribution of steering angles in the datasets of labelled images: (a) Udacity input dataset, (24105  samples). (b) Udacity postprocessed dataset, (5124  samples). (c) enriched input dataset, (31812samples). (d) enriched and post processed dataset, (7142 samples)
 
 The algorithm establishes a number of bins for the distribution (`n_bins`) and calculates the average amount of samples in the bins (`avg_samples_per_bin`). Based on the deviation from the average samples per bin a multiplication factor to correct the number of samples in each bin. The threshold to establish if bin is oversampled is half of the `avg_samples_per_bin`. For example in the (a) distribution of Illustration 1 the resulting array of shown below:
