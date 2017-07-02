@@ -34,7 +34,7 @@ As expected, the code uses a generator to prevent excessive usage of computer me
 **Main program.** This part of the code executes the pipeline transforming the images and labels in the computer file system into a preprocessed dataset ready to be fed into the neural network. First, the program opens the csv file and loads the data frame into a list, (`driving_data`). An iteration through this list removes rows of the data frame in which the captured speed is near zero. As recommended by [1] and others on the Udacity forum, this iteration includes adjustments on the angle reading of left and right hand images by +0.25 and -0.25.  The result is the two arrays with the same amount of elements: `images[]`, `angles[]`. 
 
 The second element of the main program is the pre-processing of these arrays in order to analyse and improve the distribution of angles in the dataset. The recording of steering angles in driving activity usually shows a high frequency distribution of 0 degree angles of the steering wheel. As recommended in [2] the adjustment of this distribution on a training dataset is important to remove the bias towards driving straight in the end result. The resampling of the dataset uses the approach from [1]. In figure 1 (a) and (c), the distribution of angles captured in the dataset provided by Udacity and in an enriched dataset created manually using the simulator. 
-
+ 
 ![alt text][image01]
 
 Figure 1: Distribution of steering angles in the datasets of labelled images: (a) Udacity input dataset, (24105  samples). (b) Udacity postprocessed dataset, (5124  samples). (c) enriched input dataset, (31812samples). (d) enriched and post processed dataset, (7142 samples)
